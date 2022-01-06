@@ -12,8 +12,7 @@ import java.util.Scanner;
  */
 class MediaPares {
 
-    void metMediaPares() {
-        Scanner in = new Scanner(System.in);
+    void metMediaPares(Scanner in) {
         Integer n, somapar = 0;
         System.out.println("Digite a quantidade de números que deseja analisar a"
                 + "\n média aritmética, dos números pares informados");

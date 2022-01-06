@@ -13,8 +13,7 @@ import java.util.Scanner;
  */
 class Aprovados {
 
-    void metAprovados() {
-        Scanner in = new Scanner(System.in);
+    void metAprovados(Scanner in) {
         System.out.println("Digite quantos alunos deseja registrar");
         Integer n = in.nextInt();
         String[] nome = new String[n + 1];

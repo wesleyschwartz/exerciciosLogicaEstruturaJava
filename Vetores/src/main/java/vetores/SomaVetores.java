@@ -9,8 +9,7 @@ import java.util.Scanner;
  * @author wesle
  */
 class SomaVetores {
-    void metSomaVetores() {
-        Scanner in = new Scanner(System.in);
+    void metSomaVetores(Scanner in) {
         System.out.println("Digite o tamanho do vetor");
         Integer n = in.nextInt();
         Integer[] a = new Integer[n];

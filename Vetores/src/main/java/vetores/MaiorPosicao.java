@@ -11,8 +11,7 @@ import java.util.Scanner;
  * @author wesle
  */
 class MaiorPosicao {
-    void metMaiorPosicao() {
-        Scanner in = new Scanner(System.in);
+    void metMaiorPosicao(Scanner in) {
         System.out.println("Digite a quantida de números");
         Integer n = in.nextInt();
         Integer[] vet = new Integer[n];

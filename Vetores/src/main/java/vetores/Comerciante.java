@@ -16,8 +16,7 @@ import java.util.Scanner;
  */
 class Comerciante {
 
-    void metComerciantes() {
-        Scanner in = new Scanner(System.in);
+    void metComerciantes(Scanner in) {
         System.out.println("Quantos produtos serão registrados?");
         Integer n = in.nextInt();
         String[] nome = new String[n + 1];

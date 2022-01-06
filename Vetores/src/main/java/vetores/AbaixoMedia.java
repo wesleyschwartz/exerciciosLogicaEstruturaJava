@@ -13,8 +13,7 @@ import java.util.Scanner;
  */
 class AbaixoMedia {
 
-    void metAbaixoMedia() {
-        Scanner in = new Scanner(System.in);
+    void metAbaixoMedia(Scanner in) {
         Locale.setDefault(Locale.US);
         System.out.println("Digite o tamanho dos vetores");
         Integer n = in.nextInt();

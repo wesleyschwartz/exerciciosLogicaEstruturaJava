@@ -8,50 +8,49 @@ import java.util.Scanner;
  * a menor altura do grupo, a média de altura das mulheres, e o número de
  * homens.
  *
- *
  * @author wesle
  */
 class DadosPessoas {
 
-    void metDadosPessoas() {
-        Scanner in = new Scanner(System.in);
+    void metDadosPessoas(Scanner in) {
         System.out.println("Quantas pessoas serão registradas?");
         Integer n = in.nextInt();
-        Double[] alt = new Double[n + 1];
-        Double altm = 0D;
-        Double altguardarmaior = 0D, altguardarmenor = 0D;
-        String genero = "";
-        String nomeguardarmenor = "", nomeguardarmaior = "";
-        Integer h = 0, m = 0;
-        String[] nome = new String[n + 1];
-        for (int i = 1; i < n + 1; i++) {
-            System.out.println("Qual o nome da " + i + "ª pessoa?");
-            nome[i] = in.next();
-            System.out.println("Digite a altura de " + nome[i]);
-            alt[i] = in.nextDouble();
-            if (altguardarmenor < alt[i]) {
-                altguardarmenor = alt[i];
-                nomeguardarmenor = nome[i];
+        Double[] altura = new Double[n];
+        String sexo = "";
+        int homem = 0, mulher = 0;
+        double altMulher = 0D, menorAltura = 0D, maiorAltura = 0D;
+        for (int i = 0; i < n; i++) {
+            System.out.println("Escreva a altura");
+            altura[i] = in.nextDouble();
+            System.out.println("H para homem, se não M");
+            sexo = in.next();
+            if (sexo.equalsIgnoreCase("H")) {
+                homem++;
             } else {
-                altguardarmaior = alt[i];
-                nomeguardarmaior = nome[i];
-            }
-            System.out.println("Se é homem digite H, se não M");
-            genero = in.next();
-            if (genero.equalsIgnoreCase("h")) {
-                h++;
-            } else {
-                m++;
-                altm = (alt[i] + altm) / m;
+                mulher++;
+                altMulher = (altura[i] + altMulher);
             }
         }
+        maiorAltura = altura[0];
+        menorAltura = altura[0];
+        for (int i = 0; i < n; i++) {
+            if (altura[i] > maiorAltura) {
+                maiorAltura = altura[i];
+            }
+            if (altura[i] < menorAltura) {
+                menorAltura = altura[i];
+            }
+        }
+
+        double mediaAltMulher = altMulher / mulher;
+
         System.out.println(
-                "O maior é " + nomeguardarmaior + " com " + altguardarmaior + "m");
+                "A maior altura é  com " + maiorAltura);
         System.out.println(
-                "O menor é " + nomeguardarmenor + " com " + altguardarmenor + "m");
+                "A menor altura é com " + menorAltura);
         System.out.println(
-                "Nesse grupo há: " + h + " homens");
+                "A média de altura das mulher é " + mediaAltMulher);
         System.out.println(
-                "A media de altura das mulheres é: " + altm);
+                "A quantida de homens é " + homem);
     }
 }

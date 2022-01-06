@@ -11,8 +11,7 @@ import java.util.Scanner;
  */
 class SomaVetor {
 
-    void metSomaVetor() {
-        Scanner in = new Scanner(System.in);
+    void metSomaVetor(Scanner in) {
         System.out.println("Quantos números tu vai digitar?");
         Integer n, x, y = 0;
         n = in.nextInt(); 

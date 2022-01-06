@@ -12,8 +12,7 @@ import java.util.Scanner;
  */
 class Alturas {
 
-    void metAlturas() {
-        Scanner in = new Scanner(System.in);
+    void metAlturas(Scanner in) {
         Integer n = 0;
         System.out.println("Quantos pessoa serão inseridas");
         n = in.nextInt();
